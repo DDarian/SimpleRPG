@@ -19,8 +19,8 @@ public class Hero extends GameCharacter implements Cloneable {
     public void expGane(int _exp) {
         currentExp += _exp;
         if (currentExp > expToNextLevel) {
-            currentExp -= expToNextLevel;
-            expToNextLevel *= 2;
+            currentExp = currentExp - expToNextLevel;
+            expToNextLevel = expToNextLevel * 2;
             level++;
             System.out.println(name + " повысил уровень до " + level);
         }
